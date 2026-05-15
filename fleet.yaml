@@ -20,7 +20,7 @@ helm:
     namespace:
       create: true 
     replicaCount:
-      api: 3
+      api: 4
       frontend: 2
 
 # Per-cluster overrides
@@ -56,5 +56,5 @@ targetCustomizations:
         pdb:
           enabled: true
         replicaCount:
-          api: 3
+          api: 4
           frontend: 2
