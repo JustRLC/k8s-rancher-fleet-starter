@@ -8,13 +8,17 @@
 #   2. Create a GitRepo in Rancher CD pointing at this repo
 #   3. Fleet reconciles changes automatically
 
-defaultNamespace: compliance
+defaultNamespace: compliance-app
 
 helm:
   chart: helm/compliance
   # Base values applied everywhere
   values:
     environment: dev
+    monitoring:
+      enabled: false
+    namespace:
+      create: false 
     replicaCount:
       api: 3
       frontend: 2
